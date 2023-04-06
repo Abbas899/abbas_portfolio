@@ -2,27 +2,46 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-
+import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 const Navbar = () => {
     return (
-    <>
-        {/* z-[100] always be on front */}
-        <div className='fixed w-full h-20 shadow-xl z-[100]'>
-            <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-                <img src="/assets/3D.jpg" alt="nav-logo" width='125' height='50' />
-           
-            <div >
-                <ul>
-                    <Link href="/">
-                        <li className='ml-10 text-sm uppercase hover:border-bottom'>Home</li>
-                    </Link>
-                    <button>signin</button>
-                </ul>
+        <>
+            {/* z-[100] always be on top */}
+            <div className='fixed w-full h-20 shadow-xl z-[100]'>
+                <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+                    <img src="/assets/3D.jpg" alt="nav-logo" width='100' height='30' />
+                    <div >
+                        <ul className='hidden md:flex'>
+                            <Link href="/">
+                                <li className='ml-10 text-sm uppercase hover:border-b-2 hover:border-indigo-200'>Home</li>
+                            </Link>
+                            <Link href="/">
+                                <li className='ml-10 text-sm uppercase hover:border-b-2 hover:border-indigo-200'>About</li>
+                            </Link>
+                            <Link href="/">
+                                <li className='ml-10 text-sm uppercase hover:border-b-2 hover:border-indigo-200'>Skills</li>
+                            </Link>
+                            <Link href="/">
+                                <li className='ml-10 text-sm uppercase hover:border-b-2 hover:border-indigo-200'>Projects</li>
+                            </Link>
+                            <Link href="/">
+                                <li className='ml-10 text-sm uppercase hover:border-b-2 hover:border-indigo-200'>Contact</li>
+                            </Link>
+                        </ul>
+                        <div className='md:hidden'>
+                            <AiOutlineMenu size={25}/>
+                            {/* <AiOutlineClose/> */}
+                        </div>
+                    </div>
+                </div>
+                <div className='fixed left-0 top-0 w-full h-full bg-black/70'>
+                    <div className='fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'>
+
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
-    </>
-    
+        </>
+
     )
 }
 
