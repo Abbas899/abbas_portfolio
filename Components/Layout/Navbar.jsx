@@ -1,15 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
-import React, {useState} from "react";
-import { AiOutlineMenu, AiOutlineClose, AiOutlineMail, AiOutlineInstagram } from "react-icons/ai";
-import { FaLinkedinIn, FaGithub} from "react-icons/fa";
+import React, { useState } from "react";
+import {
+  AiOutlineMenu,
+  AiOutlineClose,
+  AiOutlineMail,
+  AiOutlineInstagram,
+} from "react-icons/ai";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 const Navbar = () => {
-    const [nav, setNav]=useState(false)
+  const [nav, setNav] = useState(false);
 
-    const handleNav=()=>{
-        setNav(!nav)
-    }
+  const handleNav = () => {
+    setNav(!nav);
+  };
   return (
     <>
       {/* z-[100] always be on top */}
@@ -54,12 +59,15 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className='fixed left-0 top-0 w-full h-full bg-black/70'>
-          <div className='fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'>
+        <div className={nav?'md:hidden fixed left-0 top-0 w-full h-full bg-black/70':''}>
+          <div className={nav?'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500':'fixed left-[-100%] top-0 ease-in duration-500'}>
             <div>
               <div className="flex w-full items-center justify-between">
                 <img src="/assets/WhitebgLogo.png" alt="nav-logo" width="70" />
-                <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer">
+                <div
+                  onClick={handleNav}
+                  className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+                >
                   <AiOutlineClose size={25} />
                 </div>
               </div>
