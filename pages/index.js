@@ -2,6 +2,7 @@ import Navbar from '@/Components/Layout/Navbar'
 import Head from 'next/head'
 // import Image from 'next/image'
 import { Hero } from '../Components/Hero'
+import About from '../Components/About'
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
           <Navbar/>
           <Hero/>
+          <About/>
       </main>
     </>
   )

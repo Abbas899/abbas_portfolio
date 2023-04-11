@@ -4,10 +4,10 @@ import { AiOutlineMail, AiOutlineInstagram,} from "react-icons/ai";
 
 export const Hero = () => {
   return (
-    <div className="w-full h-screen text-center">
+    <div className="w-full sm:h-screen text-center">
       <div className="max-w-[1230px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
-          <p className="uppercase text-sm tracking-widest text-gray-600">
+          <p className="uppercase text-sm pt-24 sm:pt-4 tracking-widest text-gray-600">
             Let's build something together
           </p>
           <h1 className="py-4 text-gray-700">
